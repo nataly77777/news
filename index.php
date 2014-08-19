@@ -3,7 +3,7 @@ include __DIR__."db.php";
 
 $home='news';
 function getRoute(){
-	if(!isset $_GET['r']){
+	if(!isset ($_GET['r'])){
 		return $home;
 	}
 	return $_GET['r'];

@@ -31,9 +31,9 @@
 			<div class="news_item">
 
 			<?php while($news=$query->fetch()):?>
-			<div class="title"><a href="/test.php?id=<?php echo news['id']?>"<?php echo $news['title'];?></a></div>
+			<div class="title"><a href="/?r=oneNews&id=<?php echo news['id']?>"><?php echo $news['title'];?></a></div>
 			<div class="date"><?php echo $news['publish_date']; ?></div>
-			<div class="anounce"> <?php echo $news['text']; ?></div>
+			<div class="anounce"> <?php echo substr($news['text'],1,100); ?></div>
 			<?php endwhile; ?> 
 
 		</div>
